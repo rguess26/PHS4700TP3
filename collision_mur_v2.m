@@ -56,7 +56,7 @@ function [va2, wa2, info] = collision_mur(ra, va, wa)
     j = -m*(1 + eps_m)*vrn;
     
     % Impulsion tangentielle
-    G_ap = dot(t, (cross(cross(rap, t), rap)/I ));
+    G_ap = dot(t, (cross(cross(rap, t)/I, rap) ));
 
     alpha = 1 / ( 1/m + G_ap );
 

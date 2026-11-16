@@ -38,8 +38,8 @@ meq = m/2;
 j = -meq*(1 + eps_b)*vrn;
 
 % Impulsion tangentielle
-G_ap = dot(t, (cross(cross(rap, t), rap)/I ));
-G_bp = dot(t, (cross(cross(rbp, t), rbp)/I ));
+G_ap = dot(t, (cross(cross(rap, t) / I, rap) ));
+G_bp = dot(t, (cross(cross(rbp, t) / I, rbp) ));
 
 alpha = 1 / ( 2/m + G_ap + G_bp );
 
