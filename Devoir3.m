@@ -61,6 +61,9 @@ function [coll tr tt xb yb xr yr xj yj]=Devoir3(xyb, xyr, xyj, Vb0)
             qs_r(7:9) = wb2;
         end
 
-        % TODO collisions entre les murs
+        % collisions entre les murs
+        qs_b(1:3), qs_b(7:9), info = collision_mur(qs_b(4:6), qs_b(1:3), qs_b(7:9));
+        qs_r(1:3), qs_r(7:9), info = collision_mur(qs_r(4:6), qs_r(1:3), qs_r(7:9));
+        qs_j(1:3), qs_j(7:9), info = collision_mur(qs_j(4:6), qs_j(1:3), qs_j(7:9));
     end
 end
