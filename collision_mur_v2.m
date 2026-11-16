@@ -68,8 +68,8 @@ function [va2, wa2, info] = collision_mur(ra, va, wa)
     end
     
     J = j*n + Jt*t;
-    
-    va2 = va + J/m; va2(3) = 0;
+    J(3) = 0;
+    va2 = va + J/m;
     wa2 = wa + cross(rap,  J)/I;
     info = struct('j',j,'Jt',Jt,'glisse',glisse);
 end

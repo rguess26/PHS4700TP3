@@ -51,9 +51,9 @@ else
 end
 
 J = j*n + Jt*t;
-
-va2 = va + J/m; va2(3) = 0;
-vb2 = vb - J/m; vb2(3) = 0;
+J(3) = 0;
+va2 = va + J/m;
+vb2 = vb - J/m;
 wa2 = wa + cross(rap,  J)/I;
 wb2 = wb + cross(rbp, -J)/I;
 info = struct('j',j,'Jt',Jt,'glisse',glisse);
